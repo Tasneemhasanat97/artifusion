@@ -6,6 +6,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Code, ImageIcon, LayoutDashboard, MessageSquare, Music, Settings, VideoIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { FreeCounter } from "@/components/free-counter";
 
 
 const monsterrat = Montserrat({
@@ -32,24 +33,24 @@ const routes = [
         href: "/image",
         color: "text-pink-700",
     },
-    {
-        label: "Video Generation",
-        icon: VideoIcon,
-        href: "/video",
-        color: "text-orange-500",
-    },
+    // {
+    //     label: "Video Generation",
+    //     icon: VideoIcon,
+    //     href: "/video",
+    //     color: "text-orange-500",
+    // },
     {
         label: "Music Generation",
         icon: Music,
         href: "/music",
         color: "text-emerald-500",
     },
-    {
-        label: "Code Generation",
-        icon: Code,
-        href: "/code",
-        color: "text-yellow-500",
-    },
+    // {
+    //     label: "Code Generation",
+    //     icon: Code,
+    //     href: "/code",
+    //     color: "text-yellow-500",
+    // },
     {
         label: "Settings",
         icon: Settings,
@@ -94,7 +95,8 @@ const Sidebar = ({
                     ))}
                 </div>
             </div>
-            <FreeCounter apiLimitCount={apiLimitCount} />
+            <FreeCounter apiLimitCount={apiLimitCount} 
+            />
         </div>
     );
 };
